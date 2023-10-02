@@ -10,6 +10,7 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
+				"/home/matt/Documents/extensions/test_project/",
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
 			"outFiles": [

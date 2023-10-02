@@ -12,12 +12,35 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "menus": {
+      "view/title": [
+          {
+              "command": "Update-TreeView",
+              "when": "view == debugPlotter",
+              "group": "navigation"
+          }
+      ]
+  },
     "commands": [
       {
         "command": "debugplotter.helloWorld",
         "title": "Hello World"
-      }
-    ]
+      },
+      {
+        "command": "DebugPlotterTreeProvider.addNewItem",
+        "category": "Custom",
+        "title": "Actively updates the tree view",
+        "icon": "$(diff-insert)"
+    }
+    ],
+    "views":{
+      "debug":[
+        {
+        "id": "debugPlotter",
+        "name": "Debug Plotter"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
